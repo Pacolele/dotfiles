@@ -1,0 +1,272 @@
+* {
+  border: none;
+  border-radius: 10px;
+  font-family: "JetBrainsMono";
+  font-size: 17px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#window {
+  margin-top: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: transparent;
+  background: transparent;
+}
+
+#workspaces {
+  margin-top: 4px;
+  margin-left: 12px;
+  font-size: 4px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #3B4252;
+  /* Polar Night 2 */
+  transition: none;
+}
+
+#workspaces button {
+  transition: none;
+  color: #E5E9F0;
+  /* Light text to contrast the dark background */
+  background: transparent;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+#workspaces button.occupied {
+  transition: none;
+  color: #88C0D0;
+  /* A soft touch to differentiate occupied buttons */
+  background: transparent;
+  font-size: 4px;
+}
+
+#workspaces button.active {
+  color: #81A1C1;
+  /* Highlight active buttons */
+  border-top: 2px solid #81A1C1;
+  border-bottom: 2px solid #81A1C1;
+}
+
+#workspaces button:hover {
+  transition: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #88C0D0;
+  /* Highlight color on hover */
+  border-color: #4C566A;
+  /* Polar Night 4 */
+}
+
+#workspaces button.active:hover {
+  color: #88C0D0;
+  /* Highlight color on hover for active button */
+}
+
+#network {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 18px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #2E3440;
+  /* Polar Night 1 */
+}
+
+#pulseaudio {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #3B4252;
+  /* Polar Night 2 */
+}
+
+#battery {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #4C566A;
+  /* Polar Night 4 */
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #D8DEE9;
+  background-color: #434C5E;
+  /* Polar Night 3 */
+}
+
+#battery.critical:not(.charging) {
+  background-color: #434C5E;
+  /* Polar Night 3 */
+  color: #D8DEE9;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: #BF616A;
+    /* Red warning color */
+    color: #E5E9F0;
+  }
+}
+
+#backlight {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #3B4252;
+  /* Polar Night 2 */
+}
+
+#clock {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #4C566A;
+  /* Polar Night 4 */
+}
+
+#memory {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #434C5E;
+  /* Polar Night 3 */
+}
+
+#cpu {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #2E3440;
+  /* Polar Night 1 */
+}
+
+#tray {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #E5E9F0;
+  /* Light text color */
+  background: #3B4252;
+  /* Polar Night 2 */
+}
+
+#custom-launcher {
+  font-size: 24px;
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #88C0D0;
+  /* Light blue for differentiation */
+  background: #2E3440;
+  /* Polar Night 1 */
+}
+
+#custom-power {
+  font-size: 20px;
+  margin-top: 4px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #81a1c1;
+  /* Red for power options */
+}
+
+#custom-wallpaper {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #4C566A;
+  /* Polar Night 4 */
+}
+
+#custom-spotify {
+  margin-top: 4px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #D8DEE9;
+  /* Light text color */
+  background: #434C5E;
+  /* Polar Night 3 */
+}

@@ -1,0 +1,55 @@
+//* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
+//* .......................sud.....................*/
+//* .............CHRYSANTHEMUM.......................*/
+//* ............................................*/
+//* --- 👍 designed by https://github.com/Krautt  👍 --- */
+
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 5,
+"fixed-center": true,
+"ipc": true,
+"margin-left": 5,
+"margin-right": 5,
+"margin-top":  5,
+
+"modules-left": [
+	"clock#5",
+    "custom/chatgpt",
+    "custom/spotify",
+    "spacer"
+	],
+
+"modules-center": ["hyprland/workspaces"],
+
+"modules-right": [
+    "tray",
+	"pulseaudio#1",
+    "mpris",
+    "custom/swaync",
+	"backlight#2",
+	"battery"],
+
+    "custom/chatgpt": {
+        "format":"",
+        "onclick": "firefox --new-window --class=ChatGPT --app=https://chat.openai.com"
+    },
+
+    "custom/spotify": {
+        "format":"",
+        "onclick": "spotify"
+    },
+
+    "spacer": {
+        "format": "",
+        "min-width": 50,
+        "max-width": 100
+    }
+
+
+}

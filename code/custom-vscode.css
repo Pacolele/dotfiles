@@ -23,7 +23,7 @@
 }
 
 /* Toolbars when tabs are enabled. */
-.monaco-workbench .part.editor>.content .editor-group-container>.title .editor-actions {
+.monaco-workbench .part.editor>.content .editor-group-container>.title .editor-actions  {
     display: none !important;
 }
 
