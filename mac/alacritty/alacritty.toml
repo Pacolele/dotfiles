@@ -1,0 +1,32 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+
+decorations = "Buttonless"
+opacity = 0.91
+blur = true
+
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+bold.family = "JetBrainsMono Nerd Font"
+italic.family = "JetBrainsMono Nerd Font"
+bold_italic.family = "JetBrainsMono Nerd Font"
+size = 16
+
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.enabled]]
+binding = { key = "O", mods = "Control|Shift" }
+mouse = { enabled = true, mods = "Control" }
+hyperlinks = true
+post_processing = true
+persist = false
+command = "xdg-open"
+regex = "(https://|http://)[^\\s]+"
+
+[general]
+import = ["~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"]
