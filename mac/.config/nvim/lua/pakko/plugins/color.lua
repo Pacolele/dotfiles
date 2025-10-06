@@ -18,7 +18,7 @@ return {
   },
   {
     "catppuccin/nvim",
-    lazy = false,
+    lazy = true,
     name = "catppuccin",
     config = function()
       require("catppuccin").setup({
@@ -41,9 +41,13 @@ return {
     priority = 1000,
   },
   {
+    "savq/melange-nvim",
+    lazy = false,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "melange",
     },
   },
 }
