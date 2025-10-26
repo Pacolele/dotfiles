@@ -18,4 +18,14 @@ config.font_size = 13
 config.color_scheme_dirs = { os.getenv("HOME") .. "/.config/wezterm/colors" }
 config.color_scheme = "MelangeDark"
 
+-- Keybindings
+
+config.keys = {
+	{
+		key = "n",
+		mods = "OPT",
+		action = wezterm.action.SendString("~"),
+	},
+}
+
 return config
